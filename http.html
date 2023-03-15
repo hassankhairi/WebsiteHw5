@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hassan Khairi's Website</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Hassan Khairi</h1>
+      <nav id="nav">
+        <ul>
+          <li><a href="/home.html">Home</a></li>
+          <li><a href="/about.html"> About Me </a></li>
+          <li><a href="/projects.html"> My Projects </a></li>
+          <li><a href="/contact.html">Contact Me </a></li>
+          <li><a href="/http.html">HTTP</a></li>
+          <li><a href="/webcomponent.html">Web Comp</a></li>
+        </ul>
+      </nav>
+    </main>
+
+    <script type="module">
+      import { get, post, put, del } from "./http.js";
+    </script>
+
+    <form id="form">
+      <label for="id">Enter your ID:</label><br />
+      <input type="text" name="id" id="id" />
+      <br /><br />
+      <label for="name">Enter your article title: </label><br />
+      <input type="text" name="name" id="name" />
+      <br /><br />
+      <label for="article-body">Enter your article body: </label><br />
+      <textarea id="body" name="body" rows="8" cols="50"></textarea>
+      <br /><br />
+    </form>
+
+    <button id="post">Post</button>
+    <button id="get">Get</button>
+    <button id="put">Put</button>
+    <button id="del">Delete</button>
+
+    <output><pre id="response"></pre></output>
+  </body>
+</html>
